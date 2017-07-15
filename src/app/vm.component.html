@@ -1,0 +1,50 @@
+
+<div class="card vm_panel">
+    <!--<div class="panel-heading">
+        <img src="http://www.nhaines.com/blog/images/xerus_orange_hex.svg" alt="" class="img-responsive vm-header-img center-block" />
+    </div>-->
+    <div class="card-block">
+        <div class="vm-header">
+        <h4>{{data.hostname}}</h4>
+        <!--<p>{{data.uuid}}</p>-->
+        </div>
+        <table class="table">
+            <tr>
+                <td>Cores</td>
+                <td>{{data.cores}}</td>
+            </tr>
+            <tr>
+                <td>Memory</td>
+                <td>{{(data.memory/(1024))}}MB</td>
+            </tr>
+            <tr>
+                <td>Disk Size</td>
+                <td>{{data.disks}}GB</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>{{data.state}}</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="card-footer" style="padding:0px;">
+
+
+ <div class="btn-group btn-group-justified">
+  <a class="btn btn-success" style="border-top-left-radius: 0;" href="#">
+      <i class="fa fa-play fa-lg" style="font-size: 12px; padding: 0px; line-height: 0px;"></i> Play
+  </a>
+  <a class="btn btn-primary"  [routerLink]="['/vm/'+data.uuid]">
+  <i class="fa fa-desktop fa-lg" style="font-size: 12px; padding: 0px; line-height: 0px;"></i> Detalis
+  </a>
+  <a class="btn btn-danger" style="border-top-right-radius: 0;" href="#">
+      <i class="fa fa-trash-o fa-lg" style="font-size: 12px; padding: 0px; line-height: 0px;"></i> Delete
+  </a>
+
+</div>
+
+
+    </div>
+</div>

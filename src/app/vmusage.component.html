@@ -1,0 +1,71 @@
+<div class="container" >
+        <div *ngIf="state == 'RUNNING'; else notStop">
+            <h3><span class="label label-success pull-right">Running</span></h3>
+        </div>
+        <ng-template #notStop>
+            <h3><span class="label label-primary pull-right">{{state}}</span></h3>
+        </ng-template>
+    <br/>
+    <hr/>
+
+
+    <h3>CPU Usage </h3>
+    <div style="width:100%; height:300px"> 
+        <ngx-charts-line-chart
+            [scheme]="colorScheme"
+            [results]="multi"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [curve]="curve"
+            [legend]="hideLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [autoScale]="autoScale"
+            (select)="onSelect($event)">
+        </ngx-charts-line-chart>
+    </div>
+
+       <hr/>
+    <h3>Memory Usage </h3>
+    <div style="width:100%; height:300px"> 
+        <ngx-charts-line-chart
+            [scheme]="colorScheme"
+            [results]="multiMemory"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [curve]="curve"
+            [legend]="hideLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [autoScale]="autoScale"
+            (select)="onSelect($event)">
+        </ngx-charts-line-chart>
+    </div>
+    <hr/>
+    <!--
+    <h3>Disk Usage </h3>
+    <div style="width:100%; height:400px"> 
+        <ngx-charts-line-chart
+            [scheme]="colorScheme"
+            [results]="multi"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [curve]="curve"
+            [legend]="hideLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [autoScale]="autoScale"
+            (select)="onSelect($event)">
+        </ngx-charts-line-chart>
+    </div>
+-->
+</div>

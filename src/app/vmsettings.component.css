@@ -1,0 +1,36 @@
+.vm_panel > .panel-header {
+  padding: 0px;
+}
+.vm_panel > .panel-body{
+  padding: 0px;
+}
+.vm_panel > .panel-header > img {
+  width: 50%;
+}
+.vm_panel > .panel-footer {
+  text-align: center;
+  padding: 0px;
+}
+
+.vm-header-img{
+    max-width: 60%;
+}
+.vm-header{
+    padding: 10px;
+}
+.vm-header > h4 {
+    margin: 0px;
+}
+.vm-header > p {
+    margin: 0px;
+}
+
+.bootstrap-switch-label {
+  width: 51px !important;
+  background-color: #f4f;
+  
+}
+
+span.bootstrap-switch-label {
+    width: 51px !important;
+}

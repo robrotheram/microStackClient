@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <h3>VM Settings</h3>
+        </div>
+        <div class="col-2 float-right" style="padding-top:16px">
+            <p>
+                <switch   (statusChange)="onFlagChange()" [(status)]="vm.state" [onText]="onText" [offText]="offText" [onColor]="onColor" [offColor]="offColor" [size]="size" [disabled]="disabled"></switch>
+            </p>
+        </div>
+    </div>
+    <hr>
+    <legend>Details</legend>
+    <div class="form-group row">
+        <label class="col-4 col-form-label" style="text-align: right;" for="widgetName">VM name:</label>
+        <div class="col-4">
+            <input  [(ngModel)]="vm.name" class="form-control" type="text" name="name">
+        </div>
+    </div>
+    <legend>Performance</legend>
+    <div class="form-group row">
+          <label class="col-4 col-form-label" style="text-align: right;" for="selectbasic">Cpu Cores:</label>
+          <div class="col-4">
+              <div class="input-group number-spinner">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default" data-dir="dwn" (click)="changeCores(-1)"><span class="fa fa-minus" aria-hidden="true"></span></button>
+                  </span>
+                  <input type="text" class="form-control text-center" [(ngModel)]="vm.cores" name="cores">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default" data-dir="up" (click)="changeCores(1)"><span class="fa fa-plus" aria-hidden="true"></span></button>
+                  </span>
+              </div>
+          </div>
+      </div>
+      <div class="form-group row">
+          <label class="col-4 col-form-label" style="text-align: right;" for="selectbasic">Avalible Memory:</label>
+          <div class="col-4">
+              <div class="input-group number-spinner">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default" data-dir="dwn" (click)="changeMemory(-128)"><span class="fa fa-minus" aria-hidden="true"></span></button>
+                  </span>
+                  <input type="text" class="form-control text-center" [(ngModel)]="vm.memory" name="memory">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default" data-dir="up" (click)="changeMemory(128)"><span class="fa fa-plus" aria-hidden="true"></span></button>
+                  </span>
+              </div>
+          </div>
+      </div>
+      <legend>Disk</legend>
+      <div class="form-group row">
+          <label class="col-4 col-form-label" style="text-align: right;" for="selectbasic">Disk Size:</label>
+          <div class="col-4">
+              <div class="input-group number-spinner">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default" (click)="changeDisk(-1)"><span class="fa fa-minus" aria-hidden="true"></span></button>
+                  </span>
+                  <input type="text" class="form-control text-center" [(ngModel)]="vm.diskSize" name="diskSize">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default"  (click)="changeDisk(1)"><span class="fa fa-plus" aria-hidden="true"></span></button>
+                  </span>
+              </div>
+          </div>
+      </div>
+      <!-- Text input-->
+      <div class="form-group row">
+          <label class="col-4 col-form-label" style="text-align: right;" for="sensorId">File Path:</label>
+          <div class="col-4">
+              <input id="sensorId" name="sensorId" placeholder="A81758FFFE000000" disabled class="form-control input-md" type="text" [(ngModel)]="vm.filepath" name="filepath">
+          </div>
+      </div>
+                <hr/>
+                <div class="form-group">
+                        <div class="col-md-2 pull-right" style="padding-top:16px"><button class="btn btn-default btn-block"> Cancel</button></div>
+                        <div class="col-md-2 pull-right" style="padding-top:16px"><button class="btn btn-danger btn-block"> Delete</button></div>
+                        <div class="col-md-2 pull-right" style="padding-top:16px"><button class="btn btn-primary btn-block" (click)="edit()" >Edit</button></div>
+                </div>
+
+</div>

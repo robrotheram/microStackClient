@@ -1,0 +1,19 @@
+<div class="container">
+    <h3>History</h3>
+    <hr/>
+    <table class="table table-bordered">
+        <tr>
+            <td>Action</td>
+            <td>Details</td>
+            <td>Time</td>
+        </tr>
+        <tr *ngFor="let vm of items">
+                <td>{{vm.title}}</td>
+                <td>{{vm.text}}</td>
+                <td>{{convertDate(vm.date)}}</td>
+        </tr>
+
+
+    </table>
+
+</div>

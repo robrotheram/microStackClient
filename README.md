@@ -1,7 +1,7 @@
 # Mircostack
 This is an my experment with craeating an simple Angular 4.0 project. Not to be used in production
 
-combined with the microStackServer you can create start shutdown a vm with many thanks to the noVNC team you can also have access to the console.
+combined with the [microStackServer](https://github.com/robrotheram/microStackServer) you can create start shutdown a vm with many thanks to the noVNC team you can also have access to the console.
 
 ### Some screenshots
 ![](docs/screenshot.PNG?raw=true)

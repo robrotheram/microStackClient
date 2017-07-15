@@ -1,4 +1,19 @@
 # Mircostack
+This is an my experment with craeating an simple Angular 4.0 project. Not to be used in production
+
+combined with the microStackServer you can create start shutdown a vm with many thanks to the noVNC team you can also have access to the console.
+
+### Some screenshots
+![](docs/screenshot.PNG?raw=true)
+
+![](docs/screenshot1.PNG?raw=true)
+
+![](docs/screenshot2.PNG?raw=true)
+
+![](docs/screenshot3.PNG?raw=true)
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
 
